@@ -1,5 +1,6 @@
 import { Sen } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const getSen = Sen({
   variable: "--font-sen",
@@ -15,7 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${getSen.variable} antialiased`}>{children}</body>
+      <body className={`${getSen.variable} antialiased`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
