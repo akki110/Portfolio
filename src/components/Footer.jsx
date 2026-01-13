@@ -1,19 +1,16 @@
-import Image from "next/image";
+import { Heart } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col items-center justify-center gap-8 py-10 md:py-16 bg-gradient-to-br from-indigo-950 to-purple-950">
-      <Image src="/images/logo.webp" alt="logo" width={100} height={100} />
-      <ul className="flex flex-row justify-center text-white gap-8">
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Projects</li>
-        <li>Contact</li>
-      </ul>
-      <p className="text-md font-medium text-white">
-        © {new Date().getFullYear()} Aksh. All rights reserved.
-      </p>
+    <footer className="w-full flex justify-center py-8 bg-indigo-950">
+      <div className="w-11/12 flex flex-col md:flex-row justify-between items-center gap-5">
+        <p className="text-md font-medium text-white flex items-center gap-2">
+          Made with <Heart className="text-red-500" size={18} /> by Akshar Patel
+        </p>
+        <p className="text-md font-medium text-white">
+          © {new Date().getFullYear()} Aksh. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 };

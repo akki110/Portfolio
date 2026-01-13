@@ -1,26 +1,41 @@
-import { Home, Mail, Phone } from "lucide-react";
+import { Github, Home, Linkedin, Mail, Phone } from "lucide-react";
+import Link from "next/link";
+import { use } from "react";
 
 const ContactUs = () => {
   const userdetails = [
     {
       icon: <Home />,
       title: "Address",
-      subtitle: "123 Main St, Anytown, USA",
+      subtitle: "Ahmedabad, Gujarat, India",
     },
     {
       icon: <Phone />,
       title: "Phone",
-      subtitle: "123-456-7890",
+      subtitle: "+91 95371 85939",
     },
     {
       icon: <Mail />,
       title: "Email",
-      subtitle: "aksh@gmail.com",
+      subtitle: "patelakshar2711@gmail.com",
+    },
+    {
+      icon: <Linkedin />,
+      title: "LinkedIn",
+      link: "https://www.linkedin.com/in/akshar-patel-b97512240",
+    },
+    {
+      icon: <Github />,
+      title: "GitHub",
+      link: "https://github.com/akki110",
     },
   ];
 
   return (
-    <div className="w-full flex items-center justify-center py-10 md:py-16 bg-purple/10">
+    <div
+      className="w-full flex items-center justify-center py-10 md:py-16 scroll-mt-16"
+      id="contactus"
+    >
       <div className="w-full md:w-11/12 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
         {/* Form */}
         <div className="w-full flex flex-col gap-5 bg-white rounded-md p-5 md:p-10">
@@ -70,7 +85,7 @@ const ContactUs = () => {
                 placeholder="Message"
               ></textarea>
             </div>
-            <button className="w-4/12 bg-purple border border-purple cursor-pointer text-white p-2 rounded-full hover:bg-transparent hover:text-purple  transition-all duration-300">
+            <button className="w-4/12 bg-purple border border-purple cursor-pointer text-white p-2 rounded-full hover:bg-transparent hover:text-purple hover:translate-y-[-5px]  transition-all duration-300">
               Send Message
             </button>
           </form>
@@ -85,7 +100,17 @@ const ContactUs = () => {
               </div>
               <div className="flex flex-col">
                 <h2 className="text-md font-bold">{user.title}</h2>
-                <p>{user.subtitle}</p>
+                {user.subtitle ? (
+                  <p>{user.subtitle}</p>
+                ) : (
+                  <Link
+                    href={`${user.link}`}
+                    className="text-purple"
+                    target="_blank"
+                  >
+                    {user.link}
+                  </Link>
+                )}
               </div>
             </div>
           ))}

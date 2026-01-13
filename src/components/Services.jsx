@@ -26,7 +26,10 @@ const Services = () => {
 
   return (
     <>
-      <div className="w-full flex items-center justify-center py-10 md:py-16 bg-purple/10">
+      <div
+        className="w-full flex items-center justify-center py-10 md:py-16 scroll-mt-16"
+        id="services"
+      >
         <div className="w-11/12 flex flex-col gap-10">
           <div className="w-full flex flex-col gap-5 justify-center items-center">
             <h2 className="text-3xl md:text-5xl font-bold text-purple">
