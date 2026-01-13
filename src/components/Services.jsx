@@ -5,22 +5,17 @@ const Services = () => {
     {
       name: "MERN Stack Web Development",
       description:
-        "Building scalable and secure full-stack web applications using MongoDB, Express.js, React.js, and Node.js. Experienced in REST APIs, authentication, role-based access, and database design.",
+        "Building scalable, secure, and high-performance full-stack web applications using MongoDB, Express.js, React.js, and Node.js. Experienced in developing REST APIs, authentication systems, role-based access control, and efficient database architectures.",
     },
     {
       name: "React JS & Next JS Frontend Development",
       description:
-        "Developing modern, responsive, and SEO-friendly user interfaces using React.js and Next.js with reusable components, server-side rendering, and optimized performance.",
+        "Creating modern, responsive, and SEO-friendly user interfaces using React.js and Next.js. Specialized in reusable component architecture, server-side rendering (SSR), optimized performance, and seamless user experiences across all devices.",
     },
     {
       name: "API Integration & Third-Party Services",
       description:
-        "Integrating third-party APIs such as Google, Instagram, and custom REST APIs with secure token handling, error management, and real-time data rendering in web applications.",
-    },
-    {
-      name: "UI Development & UX Implementation",
-      description:
-        "Converting Figma and UI designs into pixel-perfect, responsive web interfaces with a focus on usability, accessibility, and smooth user experience using Tailwind CSS and Bootstrap.",
+        "Integrating third-party services and custom APIs such as payment gateways, authentication providers, and external platforms. Skilled in secure token handling, error management, and real-time data integration for reliable application workflows.",
     },
   ];
 
@@ -33,12 +28,14 @@ const Services = () => {
         <div className="w-11/12 flex flex-col gap-10">
           <div className="w-full flex flex-col gap-5 justify-center items-center">
             <h2 className="text-3xl md:text-5xl font-bold text-purple">
-              My Quality Services
+              What I Offer
             </h2>
             <p className="text-md md:text-lg font-medium w-full md:w-7/12 text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              quod. orem ipsum dolor sit amet consectetur adipisicing elit.
-              Quisquam, quod.
+              I provide end-to-end web development solutions focused on
+              performance, security, and scalability. From modern frontend
+              interfaces to robust backend systems, I help businesses and
+              startups build reliable digital products using the MERN stack and
+              modern JavaScript technologies.
             </p>
           </div>
           <div className="w-full flex flex-col justify-center items-center ">

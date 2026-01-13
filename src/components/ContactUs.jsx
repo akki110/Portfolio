@@ -43,9 +43,8 @@ const ContactUs = () => {
             Let's Work Together!
           </h2>
           <p className="text-md font-medium w-full text-start">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quod. orem ipsum dolor sit amet consectetur adipisicing elit.
-            Quisquam, quod.
+            Interested in working together? Let’s connect and build something
+            impactful with modern web technologies.
           </p>
           <form className="flex flex-col gap-5">
             <div className="flex justify-between items-center gap-3 ">

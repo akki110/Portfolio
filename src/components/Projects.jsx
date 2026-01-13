@@ -37,12 +37,11 @@ const Projects = () => {
         {/* Heading */}
         <div className="w-full flex flex-col gap-5 justify-center items-center">
           <h2 className="text-3xl md:text-5xl font-bold text-purple">
-            Project
+            Recent Projects
           </h2>
           <p className="text-md md:text-lg font-medium w-full md:w-7/12 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quod. orem ipsum dolor sit amet consectetur adipisicing elit.
-            Quisquam, quod.
+            Showcasing full-stack projects built with modern technologies,
+            focusing on performance, scalability, and user experience.
           </p>
         </div>
 

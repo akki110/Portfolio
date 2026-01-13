@@ -3,24 +3,24 @@ import { Briefcase } from "lucide-react";
 const experience = [
   {
     company: "Spectrics Solutions Pvt. Ltd",
-    startingDate: "2024",
+    startingDate: "Aug 2024",
     endingDate: "Present",
     position: "MERN Stack Developer",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. oremipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    desc: "Developing scalable, responsive web applications using React.js, Next.js, Node.js, Express.js, and MongoDB. Built and maintained admin dashboards, e-commerce modules, and management systems with role-based access control and secure authentication. Designed and integrated RESTful APIs, handled database schemas, and optimized backend performance. Followed clean coding practices, reusable component architecture, and modern development standards",
   },
   {
     company: "Technoguide Infosoft Pvt. Ltd",
     startingDate: "May 2024",
     endingDate: "Aug 2024",
     position: "React JS Developer Intern",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. oremipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    desc: "Developed dynamic and reusable UI components using React.js, JavaScript, HTML, and CSS. Worked on state management, API integration, and responsive layouts. Gained practical experience in component-based architecture, debugging, and performance optimization. Collaborated with team members, improving communication, teamwork, and professional development practices.",
   },
   {
     company: "CreArt Pvt. Ltd",
-    startingDate: "2022",
-    endingDate: "2023",
+    startingDate: "Jan 2023",
+    endingDate: "April 2023",
     position: "Python Django Developer Intern",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. orem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. oremipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+    desc: "I aquired valuable knowledge in the web development and I also learned a lot of new technical skill such as Python, Django frame work along with many non-technical skill such as Teamwork, soft skill as Professional Behavior.",
   },
 ];
 
@@ -33,12 +33,12 @@ const Experience = () => {
       <div className="w-11/12 flex flex-col justify-center items-center gap-10">
         <div className="w-full flex flex-col gap-5 justify-center items-center">
           <h2 className="text-3xl md:text-5xl font-bold text-purple">
-            Professional Experience
+            Industry Experience
           </h2>
           <p className="text-md md:text-lg font-medium w-full md:w-7/12 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quod. orem ipsum dolor sit amet consectetur adipisicing elit.
-            Quisquam, quod.
+            Proven experience in full-stack web development, delivering
+            scalable, secure, and performance-driven applications in real-world
+            projects.
           </p>
         </div>
 
