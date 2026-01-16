@@ -39,7 +39,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-4">
               <a
-                href="/resume/Akshar_Patel_Resume.pdf"
+                href="/resume/Patel_Akshar_Resume.pdf"
                 target="_blank"
                 className="w-fit border border-purple bg-purple text-white hover:translate-y-[-5px] font-medium px-4 py-2 rounded-full cursor-pointer transition-all duration-300"
               >
