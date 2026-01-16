@@ -21,7 +21,7 @@ const Projects = () => {
     {
       id: 2,
       category: "MERN",
-      image: "/images/ai-document-analysis.png",
+      image: "/images/document-analysis-platform.png",
       title: "AI Document Analysis Platform",
       desc: "Built an AI-powered document analysis application allowing users to upload PDFs and interact with intelligent chatbot responses generated via Gemini AI. Designed secure backend APIs for PDF parsing, file handling, and structured prompt processing using Node.js, Express.js, and MongoDB. Architected a modular system with planned extensions for Word and Excel transformations to support future scalability and feature expansion.",
       language: [
