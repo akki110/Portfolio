@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Patel Akshar - Portfolio
 
-## Getting Started
+**Full-Stack Web Developer | MERN & Next.js Enthusiast**
 
-First, run the development server:
+Welcome to my personal portfolio! I am **Patel Akshar**, a passionate web developer with 1.6+ years of professional experience in building scalable, responsive, and user-friendly web applications. I specialize in **React.js, Next.js, Node.js, Express.js, and MongoDB**, and have experience with authentication, role-based access control, and modern UI/UX design.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## About Me
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+I am dedicated to creating efficient and elegant web solutions that solve real-world problems. I continuously explore the latest technologies and trends to enhance my skills and deliver high-quality projects.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- ✅ Strong in **Front-End Development** (React.js, Next.js, Tailwind CSS, Bootstrap)
+- ✅ Proficient in **Back-End Development** (Node.js, Express.js, MongoDB, REST APIs)
+- ✅ Experienced in **Authentication & Authorization** (JWT, Firebase Auth)
+- ✅ Familiar with **WordPress and CMS platforms**
+- ✅ Interested in **AI integrations, PDF analysis tools, and modern web apps**
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Portfolio Highlights
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Here are some of the projects showcased in my portfolio:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Blog Website** (Next.js, MongoDB, JWT)
 
-## Deploy on Vercel
+   - Admin can publish blogs; users can read and comment.
+   - Fully authenticated admin panel.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Undefined AI** (MERN Stack)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - AI chatbot for PDF analysis.
+   - Users can upload PDFs and get insights using AI.
+
+3. **Modern Furniture Ecommerce Website** (React JS)
+   - Responsive and modern UI/UX design.
+   - User can buy and sell furniture.
+
+---
+
+## Skills
+
+- **Frontend:** React.js, Next.js, HTML, CSS, JavaScript, Tailwind CSS, Bootstrap
+- **Backend:** Node.js, Express.js, REST APIs, Firebase
+- **Database:** MongoDB, Mongoose
+- **Tools & Platforms:** Git, GitHub, VS Code, Postman
+- **Others:** WordPress, AI Integration, PDF Processing
+
+---
+
+## Contact
+
+I am open to collaborations, freelance work, and full-time opportunities.
+
+- **Email:** aksharpatel2004@gmail.com
+- **LinkedIn:** [linkedin.com/in/akshar-patel]
+- **GitHub:** [github.com/akshar-patel]
+
+---
+
+_Thank you for visiting my portfolio! Feel free to explore my projects and reach out._
