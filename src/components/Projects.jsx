@@ -4,27 +4,43 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      category: "MERN Stack",
-      image: "/images/project-1.jpg",
-      title: "Project 1",
-      desc: "Project Description",
-      language: ["React JS", "Node JS", "MongoDB", "Express JS"],
+      category: "Next JS",
+      image: "/images/content-management-blog.png",
+      title: "Content Management Blog Platform",
+      desc: "Developed a full-stack blog management platform using Next.js and React.js with JWT-based authentication and role-based access control. Implemented blog creation, editing, deletion, and user commenting features with secure APIs and protected routes for admin operations. Integrated MongoDB for efficient data storage while focusing on responsive UI design, optimized performance, and scalable production-ready architecture.",
+      language: [
+        "Next JS",
+        "React JS",
+        "Node JS",
+        "MongoDB",
+        "Express JS",
+        "JWT",
+        "Tailwind CSS",
+      ],
     },
     {
       id: 2,
-      category: "Next JS",
-      image: "/images/project-1.jpg",
-      title: "Project 1",
-      desc: "Project Description",
-      language: ["React JS", "Node JS", "MongoDB", "Express JS"],
+      category: "MERN",
+      image: "/images/ai-document-analysis.png",
+      title: "AI Document Analysis Platform",
+      desc: "Built an AI-powered document analysis application allowing users to upload PDFs and interact with intelligent chatbot responses generated via Gemini AI. Designed secure backend APIs for PDF parsing, file handling, and structured prompt processing using Node.js, Express.js, and MongoDB. Architected a modular system with planned extensions for Word and Excel transformations to support future scalability and feature expansion.",
+      language: [
+        "React JS",
+        "Node JS",
+        "MongoDB",
+        "Express JS",
+        "Gemini AI",
+        "Tailwind CSS",
+        "JWT",
+      ],
     },
     {
       id: 3,
       category: "React JS",
-      image: "/images/project-1.jpg",
-      title: "Project 1",
-      desc: "Project Description",
-      language: ["React JS", "Node JS", "MongoDB", "Express JS"],
+      image: "/images/furniture-ecommerce.png",
+      title: "Modern Furniture E-commerce Platform",
+      desc: "Developed a modern e-commerce platform using React.js with reusable UI components for product listings, filtering, and seamless navigation experiences. Integrated frontend interfaces with RESTful backend APIs to support scalable product management and consistent user interaction workflows. Focused on responsive layouts, performance optimization, and smooth user experience across mobile and desktop devices for production deployment.",
+      language: ["React JS", "Tailwind CSS"],
     },
   ];
 
@@ -52,19 +68,25 @@ const Projects = () => {
               className="w-full p-5 border border-purple/20 rounded-xl group hover:translate-y-[-5px] transition-all duration-300 cursor-pointer hover:border-purple"
               key={index}
             >
-              <Image
-                src={project.image}
-                alt="project-1"
-                width={400}
-                height={400}
-                className="w-full object-cover border  rounded-xl"
-              />
+              <div className="relative w-full h-[220px] overflow-hidden rounded-xl">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className=""
+                />
+                <p className="text-[12px] font-medium bg-purple px-2 py-0.5 rounded-full w-fit text-white absolute bottom-3 right-3 z-10">
+                  {project.category}
+                </p>
+              </div>
 
               <div className="flex flex-col items-start my-5">
                 <h5 className="text-purple text-2xl font-bold">
                   {project.title}
                 </h5>
-                <p className="text-md font-medium">{project.desc}</p>
+                <p className="text-md font-medium text-gray-600">
+                  {project.desc}
+                </p>
                 {/* Badge */}
                 <div className="flex flex-wrap justify-start gap-2 mt-5">
                   {project.language.map((data, index) => (
