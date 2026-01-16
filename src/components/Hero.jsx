@@ -15,14 +15,14 @@ const Hero = () => {
         id="home"
       >
         <div className="w-11/12 grid grid-cols-1 md:grid-cols-2 gap-4 ">
-          <div className="w-full flex flex-col gap-5 md:gap-8">
+          <div className="w-full flex flex-col gap-5 md:gap-6">
             <h3 className="text-2xl lg:text-4xl font-bolder text-purple/70">
               Hi, I’m Akshar Patel
             </h3>
             <h1 className="text-4xl lg:text-5xl font-bold text-purple">
-              MERN Stack Developer Building Scalable & Modern Web Applications
+              MERN Stack Developer
             </h1>
-            <h2 className="text-2xl lg:text-3xl font-medium text-purple">
+            <h2 className="text-xl lg:text-2xl font-medium text-purple">
               1.6+ Years of Professional Experience
             </h2>
             <h6 className="text-xl flex items-center gap-2 font-semibold text-purple">
@@ -38,9 +38,13 @@ const Hero = () => {
               solutions.
             </p>
             <div className="flex flex-col md:flex-row gap-4">
-              <button className="w-fit border border-purple bg-purple text-white hover:translate-y-[-5px] font-medium px-4 py-2 rounded-full cursor-pointer transition-all duration-300">
+              <a
+                href="/resume/Akshar_Patel_Resume.pdf"
+                target="_blank"
+                className="w-fit border border-purple bg-purple text-white hover:translate-y-[-5px] font-medium px-4 py-2 rounded-full cursor-pointer transition-all duration-300"
+              >
                 Download Resume
-              </button>
+              </a>
               <Link
                 href="#project"
                 className="w-fit border border-purple hover:border-purple text-purple font-medium hover:translate-y-[-5px] hover:text-white px-4 py-2 rounded-full cursor-pointer hover:bg-purple transition-all duration-300"

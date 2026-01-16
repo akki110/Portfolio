@@ -7,48 +7,111 @@ const Skills = () => {
       skills: [
         {
           name: "JavaScript",
-          level: 80,
+          level: 90,
           short: "J",
         },
         {
-          name: "JavaScript",
-          level: 80,
-          short: "J",
-        },
-        {
-          name: "JavaScript",
-          level: 80,
-          short: "J",
-        },
-        {
-          name: "JavaScript",
-          level: 80,
-          short: "J",
+          name: "Python",
+          level: 70,
+          short: "P",
         },
       ],
     },
     {
-      title: "Language",
+      title: "Frameworks",
       skills: [
         {
-          name: "JavaScript",
-          level: 80,
-          short: "J",
+          name: "React JS",
+          level: 90,
+          short: "R",
         },
         {
-          name: "JavaScript",
+          name: "Next Js",
           level: 80,
-          short: "J",
+          short: "N",
         },
         {
-          name: "JavaScript",
-          level: 80,
-          short: "J",
+          name: "Node JS",
+          level: 85,
+          short: "N",
         },
         {
-          name: "JavaScript",
-          level: 80,
-          short: "J",
+          name: "Express JS",
+          level: 85,
+          short: "E",
+        },
+      ],
+    },
+    {
+      title: "UI Tools",
+      skills: [
+        {
+          name: "Tailwind CSS",
+          level: 95,
+          short: "T",
+        },
+
+        {
+          name: "Bootstrap",
+          level: 95,
+          short: "B",
+        },
+        {
+          name: "Shadcn UI",
+          level: 70,
+          short: "S",
+        },
+      ],
+    },
+    {
+      title: "Database",
+      skills: [
+        {
+          name: "MongoDB",
+          level: 90,
+          short: "M",
+        },
+
+        {
+          name: "Firebase",
+          level: 90,
+          short: "F",
+        },
+        {
+          name: "MySQL",
+          level: 70,
+          short: "M",
+        },
+      ],
+    },
+    {
+      title: "Tools",
+      skills: [
+        {
+          name: "Git",
+          level: 90,
+          short: "G",
+        },
+
+        {
+          name: "Postman",
+          level: 90,
+          short: "P",
+        },
+        {
+          name: "VS Code",
+          level: 90,
+          short: "V",
+        },
+      ],
+    },
+    {
+      title: "CMS",
+      skills: [
+        {
+          name: "Wordpress",
+          level: 75,
+          short: "W",
         },
       ],
     },

@@ -31,11 +31,9 @@ const Services = () => {
               What I Offer
             </h2>
             <p className="text-md md:text-lg font-medium w-full md:w-7/12 text-center">
-              I provide end-to-end web development solutions focused on
-              performance, security, and scalability. From modern frontend
-              interfaces to robust backend systems, I help businesses and
-              startups build reliable digital products using the MERN stack and
-              modern JavaScript technologies.
+              Developing scalable and secure web applications using the MERN
+              stack. Focused on performance, reliability, and clean
+              architecture.
             </p>
           </div>
           <div className="w-full flex flex-col justify-center items-center ">
