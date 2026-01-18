@@ -61,7 +61,7 @@ const Navbar = () => {
 
       <div
         className={`
-        w-full h-16 px-2 lg:px-6 xl:px-10 fixed z-50
+        w-full h-16 px-5 lg:px-6 xl:px-10 fixed z-50
         flex items-center justify-between
         transition-all duration-300
         ${scrolled ? "bg-white backdrop-blur-md shadow-sm" : "bg-transparent"}
@@ -104,7 +104,7 @@ const Navbar = () => {
             })}
           </ul>
 
-          <div className="md:hidden  w-full flex items-center justify-end">
+          <div className="md:hidden w-full flex items-center justify-end pe-5">
             {/* Mobile Menu Icon */}
             <button
               onClick={() => setOpen(true)}
@@ -152,10 +152,10 @@ const Navbar = () => {
               {/* Header */}
               <div className="flex justify-between items-center p-4 border-b">
                 <Image
-                  src="/images/logo.webp"
+                  src="/images/ap-logo.webp"
                   alt="Logo"
-                  width={80}
-                  height={30}
+                  width={40}
+                  height={40}
                 />
                 <button onClick={() => setOpen(false)} className="text-purple">
                   <X size={24} />

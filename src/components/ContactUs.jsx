@@ -12,11 +12,6 @@ const ContactUs = () => {
 
   const userdetails = [
     {
-      icon: <Home />,
-      title: "Address",
-      subtitle: "Ahmedabad, Gujarat, India",
-    },
-    {
       icon: <Phone />,
       title: "Phone",
       subtitle: "+91 95371 85939",
@@ -146,7 +141,7 @@ const ContactUs = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`w-4/12 flex items-center justify-center gap-2
+                className={`w-4/12 flex text-sm md:text-md items-center justify-center gap-2
     border border-purple rounded-full p-2 transition-all duration-300
     ${
       isLoading
