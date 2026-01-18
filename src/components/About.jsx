@@ -1,6 +1,7 @@
 import { Code, Database } from "lucide-react";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+import MotionWrapper from "@/components/animation/MotionWrapper";
 
 const About = () => {
   const about = [
@@ -17,78 +18,79 @@ const About = () => {
   ];
 
   const socialIcons = [
-    {
-      icon: <Facebook />,
-      link: "https://www.facebook.com/share/1BCKYQzDaE/?mibextid=wwXIfr",
-    },
-    {
-      icon: <Instagram />,
-      link: "https://www.instagram.com/aksh.ptl11?igsh=MW5meHVzajg3a2xjcw%3D%3D&utm_source=qr",
-    },
-    {
-      icon: <Linkedin />,
-      link: "https://www.linkedin.com/in/akshar-patel-b97512240",
-    },
-    {
-      icon: <Twitter />,
-      link: "https://x.com/aksharp18945990?s=21",
-    },
+    { icon: <Facebook />, link: "https://www.facebook.com/share/1BCKYQzDaE/?mibextid=wwXIfr" },
+    { icon: <Instagram />, link: "https://www.instagram.com/aksh.ptl11" },
+    { icon: <Linkedin />, link: "https://www.linkedin.com/in/akshar-patel-b97512240" },
+    { icon: <Twitter />, link: "https://x.com/aksharp18945990" },
   ];
+
   return (
     <div
       className="w-full flex items-center justify-center py-10 md:py-16 bg-purple/10 scroll-mt-16"
       id="aboutus"
     >
       <div className="w-11/12 grid md:grid-cols-1 lg:grid-cols-2 gap-5 md:gap-10">
-        <div className="w-full flex flex-col gap-5 justify-start items-start">
-          <h2 className="text-3xl md:text-5xl font-bold text-purple relative">
-            About Me
-          </h2>
-          <p className="text-md md:text-lg font-medium w-full">
-            I am a MERN Stack Developer with 1.6+ years of professional
-            experience in building scalable, secure, and high-performance web
-            applications. I specialize in creating clean, responsive user
-            interfaces and developing robust backend systems using modern
-            JavaScript technologies.
-            <br />
-            <br />
-            With hands-on expertise in React.js, Next.js, Node.js, Express.js,
-            and MongoDB, I focus on writing clean, maintainable code and
-            delivering user-centric digital solutions. I enjoy solving complex
-            problems, optimizing application performance, and working in
-            collaborative Agile environments.
-          </p>
-          <div className="w-full flex gap-5 justify-start items-center">
+
+        {/* Left Content */}
+        <div className="w-full flex flex-col gap-5">
+          <MotionWrapper variant="fadeUp">
+            <h2 className="text-3xl md:text-5xl font-bold text-purple">
+              About Me
+            </h2>
+          </MotionWrapper>
+
+          <MotionWrapper variant="fadeUp" delay={0.1}>
+            <p className="text-md md:text-lg font-medium">
+              I am a MERN Stack Developer with 1.6+ years of professional
+              experience in building scalable, secure, and high-performance web
+              applications.
+              <br /><br />
+              With hands-on expertise in React.js, Next.js, Node.js, Express.js,
+              and MongoDB, I focus on writing clean, maintainable code and
+              delivering user-centric digital solutions.
+            </p>
+          </MotionWrapper>
+
+          <div className="w-full flex gap-5">
             {socialIcons.map((icon, index) => (
-              <Link
-                className="bg-purple/10 rounded-sm w-9 h-9 p-2 flex justify-center items-center text-purple hover:bg-purple hover:text-white"
-                href={icon.link}
-                key={index}
-                target="_blank"
-              >
-                {icon.icon}
-              </Link>
+              <MotionWrapper key={index} delay={index * 0.15}>
+                <Link
+                  href={icon.link}
+                  target="_blank"
+                  className="bg-purple/10 rounded-sm w-9 h-9 p-2 flex items-center justify-center
+                             text-purple hover:bg-purple hover:text-white transition"
+                >
+                  {icon.icon}
+                </Link>
+              </MotionWrapper>
             ))}
           </div>
         </div>
-        <div className="w-full flex flex-col justify-center items-start gap-8">
+
+        {/* Right Cards */}
+        <div className="w-full flex flex-col gap-8">
           {about.map((item, index) => (
-            <div
-              className="w-full p-5 border border-purple/20 rounded-xl group hover:translate-y-[-5px] transition-all duration-300 cursor-pointer hover:border-purple"
-              key={index}
-            >
-              <div className="flex items-center gap-5 mb-3">
-                <div className="w-12 h-12 flex items-center justify-center rounded-md bg-purple text-white group-hover:scale-110 transition-all duration-300">
-                  {item.icon}
+            <MotionWrapper key={index} delay={index * 0.2}>
+              <div
+                className="w-full p-5 border border-purple/20 rounded-xl cursor-pointer
+                           hover:border-purple hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="flex items-center gap-5 mb-3">
+                  <div className="w-12 h-12 flex items-center justify-center rounded-md bg-purple text-white">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-purple">
+                    {item.field}
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-purple">{item.field}</h3>
+                <p className="text-md md:text-lg font-medium">
+                  {item.desc}
+                </p>
               </div>
-              <p className="text-md md:text-lg font-medium w-full">
-                {item.desc}
-              </p>
-            </div>
+            </MotionWrapper>
           ))}
         </div>
+
       </div>
     </div>
   );

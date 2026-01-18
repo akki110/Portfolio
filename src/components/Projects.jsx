@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MotionWrapper from "@/components/animation/MotionWrapper";
 
 const Projects = () => {
   const projects = [
@@ -50,58 +51,67 @@ const Projects = () => {
       id="project"
     >
       <div className="w-11/12 flex flex-col gap-10 items-center">
+
         {/* Heading */}
-        <div className="w-full flex flex-col gap-5 justify-center items-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-purple">
-            Recent Projects
-          </h2>
-          <p className="text-md md:text-lg font-medium w-full md:w-7/12 text-center">
-            Showcasing full-stack projects built with modern technologies,
-            focusing on performance, scalability, and user experience.
-          </p>
+        <div className="w-full flex flex-col gap-5 items-center">
+          <MotionWrapper variant="fadeUp">
+            <h2 className="text-3xl md:text-5xl font-bold text-purple">
+              Recent Projects
+            </h2>
+          </MotionWrapper>
+
+          <MotionWrapper variant="fadeUp" delay={0.1}>
+            <p className="text-md md:text-lg font-medium text-center max-w-3xl mx-auto">
+              Showcasing full-stack projects built with modern technologies,
+              focusing on performance, scalability, and user experience.
+            </p>
+          </MotionWrapper>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {projects.map((project, index) => (
-            <div
-              className="w-full p-5 border border-purple/20 rounded-xl group hover:translate-y-[-5px] transition-all duration-300 cursor-pointer hover:border-purple"
-              key={index}
-            >
-              <div className="relative w-full h-[220px] overflow-hidden rounded-xl">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className=""
-                />
-                <p className="text-[12px] font-medium bg-purple px-2 py-0.5 rounded-full w-fit text-white absolute bottom-3 right-3 z-10">
-                  {project.category}
-                </p>
-              </div>
+        <MotionWrapper delay={0.2}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+            {projects.map((project, index) => (
+              <div
+                className="w-full p-5 border border-purple/20 rounded-xl group hover:translate-y-[-5px] transition-all duration-300 cursor-pointer hover:border-purple"
+                key={index}
+              >
+                <div className="relative w-full h-[220px] overflow-hidden rounded-xl">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className=""
+                  />
+                  <p className="text-[12px] font-medium bg-purple px-2 py-0.5 rounded-full w-fit text-white absolute bottom-3 right-3 z-10">
+                    {project.category}
+                  </p>
+                </div>
 
-              <div className="flex flex-col items-start my-5">
-                <h5 className="text-purple text-2xl font-bold">
-                  {project.title}
-                </h5>
-                <p className="text-md font-medium text-gray-600">
-                  {project.desc}
-                </p>
-                {/* Badge */}
-                <div className="flex flex-wrap justify-start gap-2 mt-5">
-                  {project.language.map((data, index) => (
-                    <div
-                      className="text-sm  font-medium text-purple px-3 py-1 rounded-full bg-purple/10 group-hover:bg-purple group-hover:text-white transition-all duration-300"
-                      key={index}
-                    >
-                      {data}
-                    </div>
-                  ))}
+                <div className="flex flex-col items-start my-5">
+                  <h5 className="text-purple text-2xl font-bold">
+                    {project.title}
+                  </h5>
+                  <p className="text-md font-medium text-gray-600">
+                    {project.desc}
+                  </p>
+                  {/* Badge */}
+                  <div className="flex flex-wrap justify-start gap-2 mt-5">
+                    {project.language.map((data, index) => (
+                      <div
+                        className="text-sm  font-medium text-purple px-3 py-1 rounded-full bg-purple/10 group-hover:bg-purple group-hover:text-white transition-all duration-300"
+                        key={index}
+                      >
+                        {data}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </MotionWrapper>
+
       </div>
     </div>
   );

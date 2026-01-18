@@ -1,9 +1,10 @@
 "use client";
-import { Github, Home, Linkedin, Mail, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
 import Notification from "./Notification";
 import { useEffect, useState } from "react";
+import MotionWrapper from "@/components/animation/MotionWrapper";
 
 const ContactUs = () => {
   const [notification, setNotification] = useState(null);
@@ -53,7 +54,7 @@ const ContactUs = () => {
           });
           e.target.reset();
         },
-        (error) => {
+        () => {
           setNotification({
             title: "Error",
             message: "Failed to send message",
@@ -67,7 +68,6 @@ const ContactUs = () => {
     if (notification) {
       setIsLoading(false);
       setTimeout(() => setShowNotification(true), 50);
-
       setTimeout(() => setShowNotification(false), 3000);
     }
   }, [notification]);
@@ -79,115 +79,141 @@ const ContactUs = () => {
         id="contactus"
       >
         <div className="w-full md:w-11/12 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+
           {/* Form */}
-          <div className="w-full flex flex-col gap-5 bg-white rounded-md p-5 md:p-10">
-            <h2 className="text-3xl md:text-5xl font-bold text-purple">
-              Let's Work Together!
-            </h2>
-            <p className="text-md font-medium w-full text-start">
-              Interested in working together? Let’s connect and build something
-              impactful with modern web technologies.
-            </p>
-            <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
-              <div className="flex justify-between items-center gap-3 ">
-                <input
-                  type="text"
-                  className="border border-gray-300 w-full rounded-md p-2 focus:outline-none focus:border-purple/70"
-                  name="from_name"
-                  placeholder="Name"
-                  required
-                />
-                <input
-                  type="text"
-                  className="border border-gray-300 w-full rounded-md p-2 focus:outline-none focus:border-purple/70"
-                  name="surname"
-                  placeholder="Surname"
-                  required
-                />
-              </div>
-              <div className="flex justify-between items-center gap-3 ">
-                <input
-                  type="number"
-                  className="border border-gray-300 w-full rounded-md p-2 focus:outline-none focus:border-purple/70"
-                  name="phone"
-                  placeholder="Phone Number"
-                  required
-                />
-                <input
-                  type="email"
-                  className="border border-gray-300 w-full rounded-md p-2 focus:outline-none focus:border-purple/70"
-                  name="reply_to"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-              <div className="flex justify-between items-center gap-3">
-                <input
-                  type="text"
-                  className="border border-gray-300 w-full rounded-md p-2 focus:outline-none focus:border-purple/70"
-                  name="subject"
-                  placeholder="Subject"
-                  required
-                />
-              </div>
-              <div className="flex justify-between items-center gap-3">
-                <textarea
-                  className="border border-gray-300 w-full rounded-md p-2 focus:outline-none focus:border-purple/70 min-h-[150px]"
-                  name="message"
-                  placeholder="Message"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                disabled={isLoading}
-                className={`w-4/12 flex text-sm md:text-md items-center justify-center gap-2
-    border border-purple rounded-full p-2 transition-all duration-300
-    ${
-      isLoading
-        ? "bg-purple/70 cursor-not-allowed"
-        : "bg-purple text-white hover:bg-transparent hover:text-purple hover:-translate-y-1"
-    }`}
-              >
-                {isLoading ? (
-                  <>
-                    <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                  </>
-                ) : (
-                  "Send Message"
-                )}
-              </button>
-            </form>
-          </div>
+          <MotionWrapper variant="fadeUp">
+            <div className="w-full flex flex-col gap-5 bg-white rounded-md p-5 md:p-10">
+              <MotionWrapper variant="fadeUp">
+                <h2 className="text-3xl md:text-5xl font-bold text-purple">
+                  Let's Work Together!
+                </h2>
+              </MotionWrapper>
+
+              <MotionWrapper variant="fadeUp" delay={0.1}>
+                <p className="text-md font-medium w-full text-start">
+                  Interested in working together? Let’s connect and build
+                  something impactful with modern web technologies.
+                </p>
+              </MotionWrapper>
+
+              <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+                <MotionWrapper variant="fadeUp" delay={0.2}>
+                  <div className="flex gap-3">
+                    <input
+                      type="text"
+                      name="from_name"
+                      placeholder="Name"
+                      required
+                      className="border w-full border-gray-300 rounded-md p-2 focus:outline-none focus:border-purple/70"
+                      suppressHydrationWarning
+                    />
+                    <input
+                      type="text"
+                      name="surname"
+                      placeholder="Surname"
+                      required
+                      className="border w-full border-gray-300 rounded-md p-2 focus:outline-none focus:border-purple/70"
+                      suppressHydrationWarning
+                    />
+                  </div>
+                </MotionWrapper>
+
+                <MotionWrapper variant="fadeUp" delay={0.3}>
+                  <div className="flex gap-3">
+                    <input
+                      type="number"
+                      name="phone"
+                      placeholder="Phone Number"
+                      required
+                      className="border w-full border-gray-300 rounded-md p-2 focus:outline-none focus:border-purple/70"
+                      suppressHydrationWarning
+                    />
+                    <input
+                      type="email"
+                      name="reply_to"
+                      placeholder="Email"
+                      required
+                      className="border w-full border-gray-300 rounded-md p-2 focus:outline-none focus:border-purple/70"
+                      suppressHydrationWarning
+                    />
+                  </div>
+                </MotionWrapper>
+
+                <MotionWrapper variant="fadeUp" delay={0.4}>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                    className="border w-full border-gray-300 rounded-md p-2 focus:outline-none focus:border-purple/70"
+                    suppressHydrationWarning
+                  />
+                </MotionWrapper>
+
+                <MotionWrapper variant="fadeUp" delay={0.5}>
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    required
+                    className="border w-full border-gray-300 rounded-md p-2 min-h-[150px] focus:outline-none focus:border-purple/70"
+                    suppressHydrationWarning
+                  />
+                </MotionWrapper>
+
+                <MotionWrapper variant="fadeUp" delay={0.6}>
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className={`w-4/12 border border-purple rounded-full p-2 transition-all duration-300
+                      ${
+                        isLoading
+                          ? "bg-purple/70 cursor-not-allowed"
+                          : "bg-purple text-white hover:bg-transparent hover:text-purple hover:-translate-y-1"
+                      }`}
+                  >
+                    {isLoading ? (
+                      <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                    ) : (
+                      "Send Message"
+                    )}
+                  </button>
+                </MotionWrapper>
+              </form>
+            </div>
+          </MotionWrapper>
 
           {/* Address */}
-          <div className="w-full flex flex-col justify-center items-start gap-8 p-5 md:p-10 ">
-            {userdetails.map((user, index) => (
-              <div className="flex gap-3 items-center" key={index}>
-                <div className="w-10 h-10 bg-purple text-white rounded-full flex items-center justify-center p-2.5">
-                  {user.icon}
-                </div>
-                <div className="flex flex-col">
-                  <h2 className="text-md font-bold">{user.title}</h2>
-                  {user.subtitle ? (
-                    <p>{user.subtitle}</p>
-                  ) : (
-                    <Link
-                      href={`${user.link}`}
-                      className="text-purple"
-                      target="_blank"
-                    >
-                      {user.link}
-                    </Link>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+          <MotionWrapper variant="fadeUp" delay={0.3}>
+            <div className="w-full flex flex-col gap-8 p-5 md:p-10">
+              {userdetails.map((user, index) => (
+                <MotionWrapper key={index} delay={index * 0.15}>
+                  <div className="flex gap-3 items-center">
+                    <div className="w-10 h-10 bg-purple text-white rounded-full flex items-center justify-center">
+                      {user.icon}
+                    </div>
+                    <div>
+                      <h2 className="font-bold">{user.title}</h2>
+                      {user.subtitle ? (
+                        <p>{user.subtitle}</p>
+                      ) : (
+                        <Link
+                          href={user.link}
+                          target="_blank"
+                          className="text-purple"
+                        >
+                          {user.link}
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </MotionWrapper>
+              ))}
+            </div>
+          </MotionWrapper>
+
         </div>
       </div>
 
-      {/* Notification */}
       {notification && (
         <Notification
           title={notification.title}
